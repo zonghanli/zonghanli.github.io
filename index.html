@@ -142,6 +142,78 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-保险精算--第12周作业" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/05/15/%E4%BF%9D%E9%99%A9%E7%B2%BE%E7%AE%97--%E7%AC%AC12%E5%91%A8%E4%BD%9C%E4%B8%9A/">保险精算--第12周作业</a>
+    </h1>
+  
+
+        
+        <a href="/2020/05/15/%E4%BF%9D%E9%99%A9%E7%B2%BE%E7%AE%97--%E7%AC%AC12%E5%91%A8%E4%BD%9C%E4%B8%9A/" class="archive-article-date">
+  	<time datetime="2020-05-15T06:41:25.637Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-15</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="HW1"><a href="#HW1" class="headerlink" title="HW1"></a>HW1</h3><p>一笔贷款在 n &gt; 5 年内等额分期偿还，每年末偿还一次，偿还金额为 X元，且已知<br>(1) 第 1 次还款额中的利息金额为 386.09 元；<br>(2) 第 3 次还款额中的利息金额为 323.16 元；<br>(3) 第 5 次还款额中的利息金额为 253.78 元；<br>计算 X<br>$$\begin{array}{l}<br>x\left(1-y^{z}\right)-386.09=0 \<br>x\left(1-y^{z-2}\right)-323.16=0 \<br>x\left(1-y^{z-4}\right)-253.78=0<br>\end{array}$$</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#wolframalpha</span></span><br><span class="line"> Solve[&#123;x*(<span class="number">1</span>-y^z)<span class="number">-386.09</span>=<span class="number">0</span> &amp;&amp; x*(<span class="number">1</span>-y^(z<span class="number">-2</span>))<span class="number">-323.16</span>=<span class="number">0</span> &amp;&amp; x*(<span class="number">1</span>-y^(z<span class="number">-4</span>))<span class="number">-253.78</span>=<span class="number">0</span>&#125;, &#123;x, y, z&#125;]</span><br></pre></td></tr></table></figure>
+<p><a href="https://www.wolframalpha.com/input/?i=Solve%5B%7Bx*%281-y%5Ez%29-386.09%3D0+%26%26+x*%281-y%5E%28z-2%29%29-323.16%3D0+%26%26+x*%281-y%5E%28z-4%29%29-253.78%3D0%7D%2C+%7Bx%2C+y%2C+z%7D%5D" target="_blank" rel="noopener">The Result Of HW1</a></p>
+<h3 id="HW2"><a href="#HW2" class="headerlink" title="HW2"></a>HW2</h3><p>投资者分别在 2017 年、2018 年和 2019 年的年初投资了 100 万元、150 万元和 300 万元。请根据下表数据计算该投资者在 2019 年可以分配到多少收益？<br><img src="https://img-blog.csdnimg.cn/20200515050227515.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjgzMDM2NQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>2019初:<br>$$100(1+0.065)(1+0.0653)+150(1+0.07)+300$$(<a href="https://www.wolframalpha.com/input/?i=100*%281%2b0.065%29*%281%2b0.0653%29%2b150*%281%2b0.07%29%2b300" target="_blank" rel="noopener">Result1</a>)<br>2019末：$$100(1+0.065)(1+0.0653)(1+0.0753)+150(1+0.07)(1+0.0707)+300(1+0.08)$$(<a href="https://www.wolframalpha.com/input/?i=100*%281%2b0.065%29*%281%2b0.0653%29*%281%2b0.0753%29%2b150*%281%2b0.07%29*%281%2b0.0707%29%2b300*%281%2b0.08%29" target="_blank" rel="noopener">Result2)</a><br>末-初：$$\begin{array}{l}<br>(100(1+0.065)(1+0.0653)(1+0.0753)+150(1+0.07)(1+0.0707)+300(1+0.08))- \<br>(100(1+0.065)(1+0.0653)+150(1+0.07)+300)<br>\end{array}$$<br><a href="https://www.wolframalpha.com/input/?i=%28100*%281%2b0.065%29*%281%2b0.0653%29*%281%2b0.0753%29%2b150*%281%2b0.07%29*%281%2b0.0707%29%2b300*%281%2b0.08%29%29-%28100*%281%2b0.065%29*%281%2b0.0653%29%2b150*%281%2b0.07%29%2b300%29" target="_blank" rel="noopener">The Result Of HW2</a></p>
+<h3 id="HW3"><a href="#HW3" class="headerlink" title="HW3"></a>HW3</h3><p>一笔 35 年期的贷款用等额分期偿还方法偿还，每年末偿还一次。第 8 次还款额中的利息金额为 937.5 元，第 22 次还款额中的利息金额为750 元。试求第 29 次还款额中的<strong>本金</strong><br>$$\begin{array}{l}<br>x\left(1-y^{28}\right)-937.5=0 \<br>x\left(1-y^{14}\right)-750=0 \<br>x\left(y^{7}\right)=z<br>\end{array}$$</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#wolframalpha</span></span><br><span class="line">Solve[&#123;x*(<span class="number">1</span>-y^<span class="number">28</span>)<span class="number">-937.5</span>=<span class="number">0</span> &amp;&amp; x*(<span class="number">1</span>-y^<span class="number">14</span>)<span class="number">-750</span>=<span class="number">0</span> &amp;&amp;x*(y^<span class="number">7</span>)=z &#125;, &#123;x,y,z&#125;]</span><br></pre></td></tr></table></figure>
+<p><a href="https://www.wolframalpha.com/input/?i=Solve%5B%7Bx*%281-y%5E28%29-937.5%3D0+%26%26+x*%281-y%5E14%29-750%3D0+%26%26x*%28y%5E7%29%3Dz+%7D%2C+%7Bx%2Cy%2Cz%7D%5D" target="_blank" rel="noopener">The Result Of HW3</a></p>
+<h3 id="HW4"><a href="#HW4" class="headerlink" title="HW4"></a>HW4</h3><p>一笔 10 年期的贷款用等额偿还方法偿还，每年末偿还一次。假设：<br>(1) 在最初的 3 年，偿还的本金之和为 2108.84 元；<br>(2) 在最后的 3 年，偿还的本金之和为 2775.09 元；<br>计算在整个偿还期内，支付的利息金额。<br><img src="https://img-blog.csdnimg.cn/20200514221044751.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200514222553687.png" alt="在这里插入图片描述"></p>
+<p>$$\begin{array}{l}<br>x\left(1-y^{28}\right)-937.5=0 \<br>x\left(1-y^{14}\right)-750=0 \<br>z=x \times \frac{1-y^{10}}{\frac{1}{y}-1}<br>\end{array}$$<br><a href="https://www.wolframalpha.com/input/?i=Solve%5B%7Bx*%281-y%5E28%29-937.5%3D0+%26%26+x*%281-y%5E14%29-750%3D0+%26%26z%3Dx*%281-y%5E10%29%2F%281%2Fy-1%29%7D%2C+%7Bx%2Cy%2Cz%7D%5D" target="_blank" rel="noopener">The Result Of HW4</a></p>
+<h3 id="HW5"><a href="#HW5" class="headerlink" title="HW5"></a>HW5</h3><p>一笔 80 万元的 30 年期贷款，年实际利率为 6%，以等额分期方法偿还，每年末偿还一次。哪一年偿还的利息与本金最接近？<br>$$R\left(1-v^{30-t+1}\right)=R v^{30-t+1}$$<br> $$v^{30-t+1}=\frac{1}{2},v=\frac{1}{1+0.06}$$<br> $$\left(\frac{1}{1+0.06}\right)^{30-x+1}=\frac{1}{2}$$<br> <a href="https://www.wolframalpha.com/input/?i=%281/%281%2b0.06%29%29%5E%7B30-x%2b1%7D=1/2" target="_blank" rel="noopener">The Result of HW5</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/05/15/%E4%BF%9D%E9%99%A9%E7%B2%BE%E7%AE%97--%E7%AC%AC12%E5%91%A8%E4%BD%9C%E4%B8%9A/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-沉默的羔羊" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -442,7 +514,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="数学符号"><a href="#数学符号" class="headerlink" title="数学符号"></a>数学符号</h2><table>
+        <p>[toc]</p>
+<h2 id="数学符号"><a href="#数学符号" class="headerlink" title="数学符号"></a>数学符号</h2><table>
 <thead>
 <tr>
 <th>Upper case Greek letters</th>
@@ -583,17 +656,29 @@
 <td></td>
 <td></td>
 </tr>
-</tbody></table>
-<h3 id="Fonts"><a href="#Fonts" class="headerlink" title="Fonts"></a>Fonts</h3><table>
-<thead>
 <tr>
-<th align="center">LaTeX markup…</th>
-<th align="right">…results in:</th>
+<td>### Fonts</td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
-</thead>
-<tbody><tr>
-<td align="center">$\mathbf{A}_\mathbf{\infty} \mathbf{+} \mathbf{\pi} \mathbf{A}_\mathbf{0}$</td>
-<td align="right">\mathbf{A}_\mathbf{\infty} \mathbf{+} \mathbf{\pi} \mathbf{A}_\mathbf{0}</td>
+<tr>
+<td>LaTeX markup…</td>
+<td>…results in:</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>:——–:</td>
+<td>————-:</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>$\mathbf{A}_\mathbf{\infty} \mathbf{+} \mathbf{\pi} \mathbf{A}_\mathbf{0}$</td>
+<td>\mathbf{A}_\mathbf{\infty} \mathbf{+} \mathbf{\pi} \mathbf{A}_\mathbf{0}</td>
+<td></td>
+<td></td>
 </tr>
 </tbody></table>
 <h4 id="Some-math-formula"><a href="#Some-math-formula" class="headerlink" title="Some math formula"></a>Some math formula</h4><p>$\chi\left(S_{1} # S_{2}\right)=\chi\left(S_{1}\right)+\chi\left(S_{2}\right)-2$</p>
